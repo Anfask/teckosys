@@ -1,0 +1,110 @@
+.contact {
+    background-color: #000000;
+    color: #f8f8f8;
+    padding: 20px;
+}
+
+.contact h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    margin-top: 120px;
+}
+
+.contact-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 40px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info, .contact-form {
+    width: 50%;
+    margin-bottom: 90px;
+    padding: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.info-item:hover {
+    color: #00ff00;
+    transform: translateX(2em);
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    background-color: #00ff00;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+.emai-icon { 
+    mask-image: url('../assets/mail-send-svgrepo-com.svg'); 
+ }
+
+.ph-icon { 
+    mask-image: url('../assets/contact-calling-phone-svgrepo-com.svg'); 
+}
+
+.loctn-icon { 
+    mask-image: url('../assets/location-pin-svgrepo-com.svg'); 
+}
+
+.info-item p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 20px;
+}
+
+.info-item p:first-child {
+    color: #888;
+    font-size: 18px;
+}
+
+.contact-form {
+    order: -1;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    background-color: #0000;
+}
+
+.contact-form input {
+    margin-bottom: 15px;
+    padding: 23px;
+    background-color: #2a2a2a;
+    border: none;
+    border-radius: 5px;
+    color: #f8f8f8;
+    font-size: 15px;
+}
+
+.contact-form button {
+    padding: 15px;
+    background-color: #00ff00;
+    border: none;
+    border-radius: 5px;
+    color: #ffff;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}

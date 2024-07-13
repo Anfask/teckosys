@@ -1,0 +1,101 @@
+.secure-features {
+  background-color: #000000;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.secure-features h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.secure-features .highlight {
+  color: #00ff00;
+  font-size: 2.5rem;
+}
+
+.features-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  background-color: #222;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, border-radius 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  border-radius: 20px;
+}
+
+.feature-icon {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 1rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.placement-icon {
+  background-image: url('../assets/graduated.svg');
+}
+
+.curriculum-icon {
+  background-image: url('../assets/books-magazines-svgrepo-com.svg');
+}
+
+.trainers-icon {
+  background-image: url('../assets/diploma-certificate-degree-svgrepo-com.svg');
+}
+
+.exposure-icon {
+  background-image: url('../assets/coding-html-svgrepo-com.svg');
+}
+
+.infrastructure-icon {
+  background-image: url('../assets/database-labs-svgrepo-com.svg');
+}
+
+.feature-item p {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 1200px) {
+  .features-grid {
+      justify-content: center;
+  }
+}
+
+/* Additional classes for feature items */
+.placement-feature:hover {
+  border: 2px solid #00ff00;
+}
+
+.curriculum-feature:hover {
+  border: 2px solid #00ff00;
+}
+
+.trainers-feature:hover {
+  border: 2px solid #00ff00;
+}
+
+.exposure-feature:hover {
+  border: 2px solid #00ff00;
+}
+
+.infrastructure-feature:hover {
+  border: 2px solid #00ff00;
+}

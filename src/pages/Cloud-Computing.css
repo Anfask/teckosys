@@ -1,0 +1,37 @@
+.Cloud-Computing {
+    padding: 20px;
+    background-color: #000;
+    color: #f8f8f8;
+    position: relative;
+}
+
+.Cloud-Computing h1 {
+    margin-bottom: 20px;
+    font-size: 5rem;
+    color: #ffffff;
+    margin-top: 150px;
+    text-align: left;
+    margin-left: 100px;
+}
+
+.Cloud-Computing h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #fff;
+    text-align: left;
+    margin-left: 100px;
+}
+
+.Cloud-Computing p {
+    font-size: 50px;
+    color: #ff0000;
+    text-align: center;
+    margin-top: 250px;
+    margin-bottom: 100px;
+    font-weight: bolder;
+}
+
+span {
+    color: #00ff00;
+}
+

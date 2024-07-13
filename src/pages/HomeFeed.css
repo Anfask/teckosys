@@ -1,0 +1,27 @@
+.HomeFeed {
+    color: #f8f8f8;
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.HomeFeed h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-top: 150px;
+    text-align: center;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.HomeFeed p {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #ffffffb0;
+    text-align: center;
+    margin-left: 150px;
+    margin-right: 150px;
+}

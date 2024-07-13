@@ -1,0 +1,19 @@
+.terms {
+    padding: 20px;
+}
+
+.terms h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #f8f8f8;
+    margin-top: 120px;
+}
+
+.terms p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #f8f8f8;
+    margin-top: 120px;
+}
