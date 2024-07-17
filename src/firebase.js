@@ -15,4 +15,4 @@ export const firebaseConfigContact = {
 const app = initializeApp(firebaseConfigContact);
 const database = getDatabase(app);
 
-export { app, database };
+export { app, database };+

@@ -22,6 +22,7 @@ import Devops from './pages/DevOps-Engineering';
 import DigitalMarketing from './pages/Digital-Marketing';
 import Cloud from './pages/Cloud-Computing';
 import Data from './pages/Data-Science';
+import CourseRegistration from './pages/CourseRegistration';
 
 const App = () => {
   return (
@@ -48,6 +49,7 @@ const App = () => {
           <Route path="/Digital Marketing" element={<DigitalMarketing />} />
           <Route path="/Cloud Computing" element={<Cloud />} />
           <Route path="/Data Science" element={<Data />} />
+          <Route path="/courses/:courseId" element={<CourseRegistration />} />
         </Routes>
       </div>
       <Footer />

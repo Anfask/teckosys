@@ -10,7 +10,6 @@ const NavBar = () => {
 
   const handleDropdownClick = () => {
     setDropdownOpen(!dropdownOpen);
-    window.location.href = '/courses'; // Redirect to the Courses page
   };
 
   const handleNavigate = (value) => {
@@ -42,10 +41,10 @@ const NavBar = () => {
         <p className="nav-link" onClick={() => handleNavigate('/')}>Home</p>
           <p className="nav-link" onClick={() => handleNavigate('/about')}>About</p>
           <div className="dropdown nav-link" onClick={handleDropdownClick}>
-            Courses <span className="dropdown-icon">⤸</span>
+            <span onClick={()=>handleNavigate('/courses')} >Courses</span> <span className="dropdown-icon">⤸</span>
             <div className={`dropdown-content ${dropdownOpen ? 'show' : ''}`}>
-              <a href="/Cyber-Security" className="dropdown-item">Cyber Security</a>
-              <a href="/Mobile-App-Development" className="dropdown-item">Mobile App Development</a>
+              <a onClick={() => handleNavigate('/courses/cyber-security')} className="dropdown-item">Cyber Security</a>
+              <a onClick={() => handleNavigate('/courses/Mobile-App-Development')} className="dropdown-item">Mobile App Development</a>
               <a href="/UI-UX Engineering" className="dropdown-item">UI/UX Engineering</a>
               <a href="/Web-App-Development" className="dropdown-item">Web App Development</a>
               <a href="/DevOps Engineering" className="dropdown-item">DevOps Engineering</a>

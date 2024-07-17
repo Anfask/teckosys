@@ -3,7 +3,6 @@ import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, set } from 'firebase/database';
 import Swal from 'sweetalert';
 import './Contact.css';
-import { firebaseConfigContact } from '../firebase';
 
 // Firebase configuration
 const firebaseConfig = {
@@ -17,8 +16,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-// const app = initializeApp(firebaseConfig); 
-const app = initializeApp(firebaseConfigContact); 
+const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
 const Contact = () => {

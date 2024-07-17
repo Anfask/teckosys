@@ -1,13 +1,27 @@
-import React from 'react';
-import './Cyber-Security.css';
-import image1 from '../assets/website-maintenance.svg';
-import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+import { coursesData } from '../utils/courses';
 
-const Cyber = () => {
-    const navigate = useNavigate()  
-    return (
-        <div className="Cyber-Security">
-            <h1>Cyber <span>Security</span></h1>
+const CourseRegistration = ()=>{
+    const [data, setData] = useState({});
+
+    const { courseId } = useParams()
+ console.log(courseId)
+
+    const navigate = useNavigate()
+
+    useEffect(()=>{
+
+        const selectedCourse = coursesData.find((item)=>item.slug.toLowerCase() == courseId )
+        setData(selectedCourse) 
+
+},[courseId])
+
+
+    return(
+        <div>
+            <div className="Cyber-Security">
+            <h1 dangerouslySetInnerHTML={{__html:data?.name}} />
             <h2>Cyber Security courses cover network protection, threat detection, encryption, risk management, ethical hacking, and data privacy. Students learn to defend systems against cyber attacks, implement security protocols, and stay updated on emerging threats.</h2>
             <div className="details">
                 <div className="detail">
@@ -28,7 +42,7 @@ const Cyber = () => {
                 <button className="know-more">Know More <span className='sp'>↓</span></button>
             </div>
             <div className="team">
-                <div className="member" style={{ backgroundImage: `url(${image1})` }}></div>
+                <div className="member" style={{ backgroundImage: `url(${data?.image})` }}></div>
             </div>
             
             {/* New content */}
@@ -42,7 +56,8 @@ const Cyber = () => {
                 </div>
             </div>
         </div>
-    );
-};
+        </div>
+    )
+}
 
-export default Cyber;
+export default CourseRegistration
