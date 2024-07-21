@@ -55,7 +55,7 @@
 }
 
 .dropdown-content {
-  display: none; 
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -78,6 +78,10 @@
   color: #333;
   display: block;
   font-size: 18px;
+}
+
+.dropdown-content .dropdown-item span {
+  color: #333;
 }
 
 .dropdown-content .dropdown-item:hover {

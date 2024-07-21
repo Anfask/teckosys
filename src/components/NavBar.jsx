@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './NavBar.css';
 import Logo from '../assets/logo.png';
 import { useNavigate } from 'react-router-dom';
+import { coursesData } from '../utils/courses';
 
 const NavBar = () => {
   const navigate = useNavigate();
@@ -38,20 +39,23 @@ const NavBar = () => {
           <img src={Logo} alt="Logo" className="logo-image" />
         </div>
         <div className="nav-links">
-        <p className="nav-link" onClick={() => handleNavigate('/')}>Home</p>
+          <p className="nav-link" onClick={() => handleNavigate('/')}>Home</p>
           <p className="nav-link" onClick={() => handleNavigate('/about')}>About</p>
           <div className="dropdown nav-link" onClick={handleDropdownClick}>
-            <span onClick={()=>handleNavigate('/courses')} >Courses</span> <span className="dropdown-icon">⤸</span>
+            <span onClick={() => handleNavigate('/courses')} >Courses</span> <span className="dropdown-icon">⤸</span>
             <div className={`dropdown-content ${dropdownOpen ? 'show' : ''}`}>
-              <a onClick={() => handleNavigate('/courses/cyber-security')} className="dropdown-item">Cyber Security</a>
-              <a onClick={() => handleNavigate('/courses/Mobile-App-Development')} className="dropdown-item">Mobile App Development</a>
-              <a href="/UI-UX Engineering" className="dropdown-item">UI/UX Engineering</a>
-              <a href="/Web-App-Development" className="dropdown-item">Web App Development</a>
-              <a href="/DevOps Engineering" className="dropdown-item">DevOps Engineering</a>
-              <a href="/Digital Marketing" className="dropdown-item">Digital Marketing</a>
-              <a href="/Cloud Computing" className='dropdown-item'>Cloud Computing</a>
-              <a href="/Data Science" className='dropdown-item'>Data Science</a>
+              {coursesData.map((item, i) => <a key={i} onClick={() => handleNavigate(`/courses/${item.slug}`)} className="dropdown-item" dangerouslySetInnerHTML={{ __html: item.name }} />)}
             </div>
+            {/* <div className={`dropdown-content ${dropdownOpen ? 'show' : ''}`}>
+              <a onClick={() => handleNavigate('/courses/cyber-security')} className="dropdown-item">Cyber Security</a>
+              <a onClick={() => handleNavigate('/courses/mobile-app-development')} className="dropdown-item">Mobile App Development</a>
+              <a onClick={() => handleNavigate('/courses/mobile-app-development')} className="dropdown-item">UI/UX Engineering</a>
+              <a onClick={() => handleNavigate('/courses/mobile-app-development')} className="dropdown-item">Web App Development</a>
+              <a onClick={() => handleNavigate('/courses/mobile-app-development')} className="dropdown-item">DevOps Engineering</a>
+              <a onClick={() => handleNavigate('/courses/mobile-app-development')} className="dropdown-item">Digital Marketing</a>
+              <a onClick={() => handleNavigate('/courses/mobile-app-development')} className='dropdown-item'>Cloud Computing</a>
+              <a onClick={() => handleNavigate('/courses/mobile-app-development')} className='dropdown-item'>Data Science</a>
+            </div> */}
           </div>
           <p className="nav-link" onClick={() => handleNavigate('/workshops')}>Workshops</p>
           <p className="nav-link" onClick={() => handleNavigate('/blogs')}>Blogs</p>
@@ -68,7 +72,7 @@ export default NavBar;
 
 // import React, { useEffect, useState } from 'react';
 // import './NavBar.css';
-// import Logo from '../assets/logo.png'; 
+// import Logo from '../assets/logo.png';
 // import { useNavigate } from 'react-router-dom';
 
 // const NavBar = () => {
